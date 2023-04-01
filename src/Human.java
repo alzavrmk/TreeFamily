@@ -29,7 +29,6 @@ public class Human {
     }
 
     public Human getMother() {
-
         return mother;
     }
 
@@ -49,9 +48,9 @@ public class Human {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+ //  public void setName(String name) {
+//        this.name = name;
+//    }
 
     public Gender getGender() {
         return gender;
@@ -61,13 +60,13 @@ public class Human {
         return birthdate;
     }
 
-    public void setBirthdate(String birthdate) {
-        this.birthdate = birthdate;
-    }
+//    public void setBirthdate(String birthdate) {
+//        this.birthdate = birthdate;
+//    }
 
-    public void newChildrenList() {
-        this.сhildrenList = new ArrayList<>();
-    }
+//    public void newChildrenList() {
+//        this.сhildrenList = new ArrayList<>();
+//    }
 
 
     public void addChildrenList(Human human) {
@@ -82,7 +81,7 @@ public class Human {
 
 
     private String getInfo(){
-        return String.format("Фамилия: %s;\nИмя: %s;\nПол: %s;\nДата рождения: %s;\n", family, name, gender,birthdate);
+        return String.format("\n\nФамилия: %s;\nИмя: %s;\nПол: %s;\nДата рождения: %s;", family, name, gender,birthdate);
     }
 
 

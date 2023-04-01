@@ -31,4 +31,11 @@ public class TreeFamily {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return "TreeFamily{" +
+                "list=" + list +
+                '}';
+    }
 }
