@@ -1,3 +1,5 @@
+import java.io.LineNumberInputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,13 +21,15 @@ public class Human {
         this.name = name;
         this.gender = gender;
         this.birthdate = birthdate;
+        this.сhildrenList =new ArrayList<>();
     }
 
-    public Human(String family, String name,Gender gender,String birthdate ) {
+    public Human(String family, String name,Gender gender,String birthdate) {
         this (null,null , family, name, gender, birthdate);
     }
 
     public Human getMother() {
+
         return mother;
     }
 
@@ -61,13 +65,21 @@ public class Human {
         this.birthdate = birthdate;
     }
 
+    public void newChildrenList() {
+        this.сhildrenList = new ArrayList<>();
+    }
+
+
+    public void addChildrenList(Human human) {
+
+        this.сhildrenList.add(human);
+    }
+
     public List<Human> getСhildrenList() {
         return сhildrenList;
     }
 
-    public void addСhildrenList(Human сhild) {
-        сhildrenList.add(сhild);
-    }
+
 
     private String getInfo(){
         return String.format("Фамилия: %s;\nИмя: %s;\nПол: %s;\nДата рождения: %s;\n", family, name, gender,birthdate);

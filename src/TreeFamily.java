@@ -27,7 +27,7 @@ public class TreeFamily {
         for (Human hum : list) {
             if (kid.getMother().equals(hum)
                     || kid.getFather().equals(hum)) {
-                hum.addСhildrenList(kid);
+                hum.addChildrenList(kid);
             }
         }
     }
