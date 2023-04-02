@@ -21,8 +21,11 @@ public class Main {
         pa.addChildrenList(sister2);
 
         System.out.println("Дети "+pa.getName()+" "+ pa.getFamily() +":\n  "+pa.getСhildrenList());
+        System.out.println("Дети "+ma.getName()+" "+ ma.getFamily() +":\n  "+ma.getСhildrenList());
+
         System.out.println();
         System.out.println(tree);
+    
 
     }
 }
