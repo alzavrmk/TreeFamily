@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +41,7 @@ public class TreeFamily implements Serializable {
                 '}';
     }
 
-    public void save(Writable writable){
+    public void save(Writable writable) throws IOException {
         writable.save(this);
 
     }

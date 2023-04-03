@@ -28,19 +28,19 @@ public class Main {
         System.out.println(tree);
         FileHandler fileHandler = new FileHandler();
         fileHandler.save(tree);
-        fileHandler.read();
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("file.out"));
-        objectOutputStream.writeObject(sister1);
-        objectOutputStream.writeObject(tree);
-        objectOutputStream.close();
+        TreeFamily treeOut = (TreeFamily) fileHandler.read();
+//        ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("file.out"));
+//        objectOutputStream.writeObject(sister1);
+//        objectOutputStream.writeObject(tree);
+//        objectOutputStream.close();
 
-        ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("file.out"));
-        Human sisterout1 = (Human) objectInputStream.readObject();
-        TreeFamily treeOut = (TreeFamily) objectInputStream.readObject();
-        objectInputStream.close();
+//        ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("file.out"));
+//        Human sisterout1 = (Human) objectInputStream.readObject();
+//        TreeFamily treeOut = (TreeFamily) objectInputStream.readObject();
+//        objectInputStream.close();
 
-        System.out.println(sisterout1);
-        System.out.println(tree);
+        System.out.println();
+        System.out.println(treeOut);
 
     
 
