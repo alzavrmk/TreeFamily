@@ -1,5 +1,4 @@
-public interface Writeable implements Writeable{
-    void save(Object object){
-
-    }
+public interface Writable  {
+    public void save(Object object);
+    public void read();
 }

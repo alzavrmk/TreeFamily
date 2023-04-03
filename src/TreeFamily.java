@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TreeFamily {
+public class TreeFamily implements Serializable {
     private List<Human> list;
 
     public TreeFamily() {
@@ -38,4 +39,11 @@ public class TreeFamily {
                 "list=" + list +
                 '}';
     }
+
+    public void save(Writable writable){
+        writable.save(this);
+
+    }
+
+
 }

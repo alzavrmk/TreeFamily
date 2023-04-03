@@ -1,9 +1,10 @@
 import java.io.LineNumberInputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Human {
+public class Human implements Serializable {
 
     public Human mother;
     public Human father;

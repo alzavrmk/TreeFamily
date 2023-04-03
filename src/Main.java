@@ -1,8 +1,9 @@
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException,ClassNotFoundException {
         Human pa = new Human("Bazarov", "Alex", Gender.Mail,"08.07.1949");
         Human ma = new Human("Budina", "Anna", Gender.Fimale,"15.09.1948");
         Human sister1 = new Human("Bazarova","Helga", Gender.Fimale,"10.03.1978");
@@ -25,6 +26,22 @@ public class Main {
 
         System.out.println();
         System.out.println(tree);
+        FileHandler fileHandler = new FileHandler();
+        fileHandler.save(tree);
+        fileHandler.read();
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("file.out"));
+        objectOutputStream.writeObject(sister1);
+        objectOutputStream.writeObject(tree);
+        objectOutputStream.close();
+
+        ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("file.out"));
+        Human sisterout1 = (Human) objectInputStream.readObject();
+        TreeFamily treeOut = (TreeFamily) objectInputStream.readObject();
+        objectInputStream.close();
+
+        System.out.println(sisterout1);
+        System.out.println(tree);
+
     
 
     }
